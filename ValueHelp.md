@@ -52,4 +52,13 @@ if(leadOB.ZAgain_ID_ != ""){
 #1 增强TI界面新字段
 #2 改变字段ID属性
 #3 扩展scenario
+#4 增加XBO的scenario的名称及code
+#5 Lead选择的代理商，数据写入关系
+    if 代理商客户不为空
+    role=固定
+    客户=代理商角色
+    销售组织=Account 销售组织
+    分销渠道=Account 分销渠道
+    货币，Lead没有货币；
+    else 不写入
 
