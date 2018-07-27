@@ -1,6 +1,58 @@
 # lewis.github.io
 Lewis's Github project
-//code 
+//XBO CODE
+import AP.Common.GDT;
+import AP.FO.BusinessPartner.Global;
+
+[Extension] businessobject AP.FO.BusinessPartner.Global:BusinessPartnerSolutionExtensions raises BPEmsg{
+ 
+        // You must activate this business object before you can access the extension fields
+        // or messages in script files, forms, and screens.
+
+		message BPEmsg text "&1":LANGUAGEINDEPENDENT_EXTENDED_Text;
+    
+   		node IndustryBanking {
+   	   
+      		node CoverageTeam {
+      	    } 
+       
+      		node EmploymentDetails {
+      	    } 
+       
+      		node Income {
+      	    } 
+       
+      		node Objectives {
+      	    } 
+       
+      		node NetAssets {
+      	    } 
+       
+      		node Regulatory {
+      	    } 
+       
+      		node AdditionalIncome {
+      	    } 
+       
+      		node CommercialBankingAccountAttributes {
+      	    } 
+
+        } 
+		action CopyAccount raises BPEmsg;
+		action leadUpdate raises BPEmsg;
+     
+  
+}
+
+//code closed
+
+
+
+
+
+
+
+//code ABSL
 
 import ABSL;
 import AP.FO.BusinessPartner.Global;
