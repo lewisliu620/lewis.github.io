@@ -1,10 +1,8 @@
 # lewis.github.io
 Lewis's Github project
 
-ABAL
-
+//代码ABAL开始
 import ABSL;
-
 var activityType = this.TypeCode;
 if(activityType == "86"){
 	//TQM客户
