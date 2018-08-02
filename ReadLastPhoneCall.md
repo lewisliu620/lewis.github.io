@@ -2,6 +2,7 @@
 Lewis's Github project
 
 //代码ABAL开始
+
 import ABSL;
 var activityType = this.TypeCode;
 if(activityType == "86"){
