@@ -11,11 +11,11 @@ if(activityType == "86"){
 	var prospect = this.MainActivityParty.Party.BusinessPartner;	
 
 	//特定事項
-	var ZPhoneCall_DecisionMatter = this.ZPhoneCall_DecisionMatter;
+	var ZPhoneCall_DecisionMatter = this.ZAcc_Gen_Decision;
 	//一周活动的回顾
-	var ZPhoneCall_OneWeekActivity = this.ZPhoneCall_OneWeekActivity;
+	var ZPhoneCall_OneWeekActivity = this.ZAcc_Gen_OneWeekActivity;
 	//上周的决定事项
-	var ZPhoneCall_OneWeekDecide = this.ZPhoneCall_OneWeekDecide;
+	var ZPhoneCall_OneWeekDecide = this.ZAcc_Gen_OneWeekDecide;
 
 	if(prospect.IsSet()){
 		//客户名称
@@ -42,7 +42,9 @@ if(activityType == "86"){
 			prospect.CurrentCommon.ZAcc_Gen_SpecDecide = ZPhoneCall_DecisionMatter;
 
 			//检查是否成功更新值
-			if(prospect.CurrentCommon.ZAcc_Gen_OneWeekDecide == ZPhoneCall_OneWeekDecide){
+			if((prospect.CurrentCommon.ZAcc_Gen_OneWeekDecide == ZPhoneCall_OneWeekDecide)
+			&&(prospect.CurrentCommon.ZAct_Gen_OneWeekActivity == ZPhoneCall_OneWeekActivity)
+			&&(prospect.CurrentCommon.ZAcc_Gen_SpecDecide == ZPhoneCall_DecisionMatter)){
 				raise ActMsg.Create("I","字段已更新到客户");
 			}else{
 				raise ActMsg.Create("E","客户"+prospectName+"被锁定，未能更新到客户");				
@@ -51,6 +53,7 @@ if(activityType == "86"){
 		}
 	}
 }
+
 
 
 
